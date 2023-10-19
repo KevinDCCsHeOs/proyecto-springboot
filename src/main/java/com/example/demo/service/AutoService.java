@@ -52,4 +52,11 @@ public class AutoService {
         return AutoDTO.build(auto);
 
     }
+
+    public AutoDTO delete(final Integer id){
+        final Auto auto = getById(id);
+        autoJPA.deleteById(id);
+        return AutoDTO.build(auto);
+    }
+
 }
